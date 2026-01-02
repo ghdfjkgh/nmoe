@@ -26,7 +26,7 @@ Use this when acting as the coordinator/merge captain (human or AI).
 4. Agent iterates until Tier A passes and commits are clean + issue-scoped.
 5. Agent opens a PR with the attestation block filled (Tier A evidence).
 6. Maintainer triggers Tier B on the PR merge ref (`refs/pull/<PR>/merge`) with the appropriate bundle.
-7. Merge only after Tier B reports pass (and sequencing constraints are satisfied).
+7. Merge only after Tier B reports pass (and sequencing constraints are satisfied); default is squash-and-merge (one commit per PR).
 
 ## 1. Create Issue (Contract)
 
@@ -172,7 +172,7 @@ EOF
 ### How it works
 
 1. Maintainer triggers workflow via GitHub Actions
-2. Workflow uses `environment: b200` (requires approval)
+2. Workflow uses `environment: b200-gates` (requires approval)
 3. ARC spins up runner pod on B200 node (scale 0→1)
 4. Gates run against `refs/pull/<PR>/merge` (integration test)
 5. Results posted as PR comment
@@ -198,6 +198,25 @@ GitHub → Actions → "Tier B gates" → Run workflow
 | `full` | all gates |
 
 ## 6. Merge Down
+
+### Merge policy (default)
+
+Default:
+- **Squash-and-merge** (one PR → one commit on `master`).
+- **Delete the branch as part of merge** (keeps the repo tidy and reduces coordinator load).
+
+Exceptions (explicitly opt-in per PR):
+- Use a **merge commit** only if the PR's internal commits are intentionally structured and should be preserved.
+- Keep the branch only if you plan to follow up immediately (e.g., postmortem, extra rollups).
+
+Recommended command-line equivalents:
+```bash
+# Default (recommended): one commit per PR + delete branch.
+gh pr merge <PR_NUMBER> --squash --delete-branch
+
+# Exception: preserve the PR's commit structure.
+gh pr merge <PR_NUMBER> --merge --delete-branch
+```
 
 ### Merge order matters
 
@@ -261,9 +280,11 @@ Gates are defined in `configs/gates/gates.toml`.
 
 ### GitHub Environment
 
-- **Name**: `b200`
+- **Name**: `b200-gates`
 - **Protection**: Required reviewer (maintainer)
 - **Purpose**: Gate Tier B workflow triggers
+
+Note: keep a separate `b200` environment reserved for real deployments/releases (not gates).
 
 ### Updating runner image
 
